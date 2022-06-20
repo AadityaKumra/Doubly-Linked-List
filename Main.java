@@ -7,5 +7,8 @@ class Main {
     dll.insertNode(3,1);
     dll.insertNode(0,10);
     System.out.println(dll.head.value);
+  
+    dll.traverseDLL();
+  
   }
 }
