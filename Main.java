@@ -9,6 +9,7 @@ class Main {
     System.out.println(dll.head.value);
   
     dll.traverseDLL();
+    dll.reverseTraverse();
   
   }
 }
