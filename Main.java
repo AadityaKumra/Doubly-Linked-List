@@ -10,6 +10,8 @@ class Main {
   
     dll.traverseDLL();
     dll.reverseTraverse();
-  
+    dll.searchNode(0);
+    dll.searchNode(2);
+    dll.searchNode(8);
   }
 }
