@@ -14,4 +14,37 @@ public class DoublyLinkedList{
     size=1;
     return head;
   }
+  //insert node
+
+  public void insertNode(int nodeValue,int location){
+    doublyNode newNode=new doublyNode();
+    newNode.value=nodeValue;
+    if(head==null){
+      createDLL(nodeValue);
+      return;
+    }
+    else if(location==0){
+      newNode.prev=null;
+      newNode.next=head;
+      head.prev=newNode;
+      head=newNode;
+    }
+    else if(location>=size){
+      tail.next=newNode;
+      newNode.prev=tail;
+      tail=newNode;
+      newNode.next=null;
+    }
+    else{
+      doublyNode tempNode=head;
+      for(int i=0;i<location-1;i++){
+        tempNode.next=tempNode;
+      }
+      newNode.prev=tempNode;
+      newNode.next=tempNode.next;
+      tempNode.next=newNode;
+      newNode.next.prev=newNode;      
+    }
+    size+=1;
+  }
 }
